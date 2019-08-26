@@ -1,0 +1,22 @@
+div {
+  background: #0c2340;
+  border-radius: 20px;
+  box-shadow: 7px 7px 15px 5px black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 10px;
+  margin: 13px 0;
+  width: 35%;
+}
+
+p {
+  margin: 7px 0;
+  text-align: center;
+}
+
+.category {
+  font-weight: bold;
+  font-size: 20px;
+}
