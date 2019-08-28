@@ -1,3 +1,10 @@
+<form class="addForm" #cartForm="ngForm" (ngSubmit)="addItem(cartForm)">
+  <input type="text" name="product" ngModel placeholder="Product" />
+  <input type="number" name="price" ngModel placeholder="Price" />
+  <input type="number" name="quantity" ngModel placeholder="Quantity" />
+  <button>Add Item</button>
+</form>
+
 <div *ngFor="let item of items">
   <p>
     <span class="category">Product:</span> {{ item.product || "Not provided" }}
@@ -8,4 +15,19 @@
     <span class="category">Quantity:</span>
     {{ item.quantity || "Not provided" }}
   </p>
+  <i (click)="deleteItem(item.id)" class="fas fa-times fa-2x"></i>
+  <button (click)="toggleEditForm()">Update Quantity</button>
+  <form
+    class="editform"
+    *ngIf="editForm"
+    #editForm="ngForm"
+    (ngSubmit)="updateItem(item.id, editForm)"
+  >
+    <input
+      type="number"
+      name="updatedQuantity"
+      ngModel
+      placeholder="Quantity"
+    />
+  </form>
 </div>

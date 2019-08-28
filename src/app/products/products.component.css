@@ -4,11 +4,11 @@ div {
   box-shadow: 7px 7px 15px 5px black;
   color: white;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   padding: 10px;
   margin: 13px 0;
   width: 35%;
+  position: relative;
 }
 
 p {
@@ -19,4 +19,24 @@ p {
 .category {
   font-weight: bold;
   font-size: 20px;
+}
+
+i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.editform {
+  margin: auto;
+}
+
+div button {
+  padding: 7px;
+  width: 50%;
+  margin: 7px auto;
+  border: none;
+  border-radius: 15px;
+  background: #fa4616;
+  font-weight: bold;
 }
